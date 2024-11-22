@@ -2,6 +2,9 @@
 
 <h2>VideoReTalking <br/> <span style="font-size:12px">Audio-based Lip Synchronization for Talking Head Video Editing in the Wild</span> </h2> 
 
+<h1>VideoReTalking <br/> <span style="font-size:12px">I Make it work on Windows, fixed some bugz and have made some improvements to the code</span> </h2> 
+
+
   <a href='https://arxiv.org/abs/2211.14758'><img src='https://img.shields.io/badge/ArXiv-2211.14758-red'></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://vinthony.github.io/video-retalking/'><img src='https://img.shields.io/badge/Project-Page-Green'></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vinthony/video-retalking/blob/main/quick_demo.ipynb)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [![Replicate](https://replicate.com/cjwbw/video-retalking/badge)](https://replicate.com/cjwbw/video-retalking)
 
@@ -58,9 +61,42 @@ conda activate video_retalking
 
 conda install ffmpeg
 
+# or
+
+Python >= 3.10
+- Pip (Python package installer)
+- [FFmpeg](https://ffmpeg.org/download.html) #Should be installed manually and added to sys env path
+
+## Usage
+
+1- Clone the repository:
+
+```
+git clone https://github.com/overcrash66/video-retalking.git
+```
+
+2- Navigate to folder:
+
+```
+cd video-retalking
+```
+
+3- Create a vitrual env:
+
+```
+py -3.10 -m venv venv
+```
+
+```
+venv\Scripts\activate
+```
+
 # Please follow the instructions from https://pytorch.org/get-started/previous-versions/
 # This installation command only works on CUDA 11.1
 pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+
+# This installation command only works on CUDA 11.8
+pip install torch==2.1.1 torchvision==0.16.1 --index-url https://download.pytorch.org/whl/cu118
 
 pip install -r requirements.txt
 ```

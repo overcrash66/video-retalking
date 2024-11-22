@@ -21,7 +21,7 @@ class KeypointExtractor():
         if isinstance(images, list):
             keypoints = []
             if info:
-                i_range = tqdm(images,desc='landmark Det:')
+                i_range = tqdm(images, desc='landmark Det:')
             else:
                 i_range = images
 
@@ -33,8 +33,22 @@ class KeypointExtractor():
                     keypoints.append(current_kp[None])
 
             keypoints = np.concatenate(keypoints, 0)
-            np.savetxt(os.path.splitext(name)[0]+'.txt', keypoints.reshape(-1))
+
+            if name is not None:
+                # Ensure the directory exists
+                output_dir = '.'
+                os.makedirs(output_dir, exist_ok=True)
+
+                # Use only the base file name and append to the output directory
+                clean_name = os.path.basename(os.path.splitext(name)[0]) + '_landmarks.txt'
+                output_path = os.path.join(output_dir, clean_name)
+
+                # Save the keypoints to the text file
+                np.savetxt(output_path, keypoints.reshape(-1))
+                print(f"Keypoints saved to {output_path}")
+
             return keypoints
+
         else:
             while True:
                 try:
@@ -42,7 +56,7 @@ class KeypointExtractor():
                     break
                 except RuntimeError as e:
                     if str(e).startswith('CUDA'):
-                        print("Warning: out of memory, sleep for 1s")
+                        print("Warning: out of memory, sleeping for 1s")
                         time.sleep(1)
                     else:
                         print(e)
@@ -50,10 +64,22 @@ class KeypointExtractor():
                 except TypeError:
                     print('No face detected in this image')
                     shape = [68, 2]
-                    keypoints = -1. * np.ones(shape)                    
+                    keypoints = -1. * np.ones(shape)
                     break
+
             if name is not None:
-                np.savetxt(os.path.splitext(name)[0]+'.txt', keypoints.reshape(-1))
+                # Ensure the directory exists
+                output_dir = '.'
+                os.makedirs(output_dir, exist_ok=True)
+
+                # Use only the base file name and append to the output directory
+                clean_name = os.path.basename(os.path.splitext(name)[0]) + '_landmarks.txt'
+                output_path = os.path.join(output_dir, clean_name)
+
+                # Save the keypoints to the text file
+                np.savetxt(output_path, keypoints.reshape(-1))
+                print(f"Keypoints saved to {output_path}")
+
             return keypoints
 
 def read_video(filename):
