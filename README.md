@@ -97,11 +97,15 @@ venv\Scripts\activate
 
 # Please follow the instructions from https://pytorch.org/get-started/previous-versions/
 # This installation command only works on CUDA 11.1
+```
 pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
-
+```
 # This installation command only works on CUDA 11.8
+```
 pip install torch==2.1.1 torchvision==0.16.1 --index-url https://download.pytorch.org/whl/cu118
+```
 
+```
 pip install -r requirements.txt
 ```
 
