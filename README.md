@@ -3,7 +3,7 @@
 <h2>VideoReTalking <br/> <span style="font-size:12px">Audio-based Lip Synchronization for Talking Head Video Editing in the Wild</span> </h2> 
 
 
-<h1>VideoReTalking <br/> <span style="font-size:12px">I Make it work on Windows, fixed some bugz and have made some improvements to the code</span> </h2> 
+<h1>VideoReTalking <br/> <span style="font-size:12px">I got it functioning on Windows, resolved several issues, and enhanced the code with some improvements.</span> </h2> 
 
 
 
