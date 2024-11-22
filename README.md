@@ -2,7 +2,10 @@
 
 <h2>VideoReTalking <br/> <span style="font-size:12px">Audio-based Lip Synchronization for Talking Head Video Editing in the Wild</span> </h2> 
 
+
 <h1>VideoReTalking <br/> <span style="font-size:12px">I Make it work on Windows, fixed some bugz and have made some improvements to the code</span> </h2> 
+
+
 
 
   <a href='https://arxiv.org/abs/2211.14758'><img src='https://img.shields.io/badge/ArXiv-2211.14758-red'></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://vinthony.github.io/video-retalking/'><img src='https://img.shields.io/badge/Project-Page-Green'></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vinthony/video-retalking/blob/main/quick_demo.ipynb)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -60,6 +63,7 @@ conda create -n video_retalking python=3.8
 conda activate video_retalking
 
 conda install ffmpeg
+```
 
 # or
 
